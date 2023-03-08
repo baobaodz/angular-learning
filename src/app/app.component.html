@@ -1,0 +1,12 @@
+<p>Start editing to see some magic happen :)</p>
+<ng-container>
+  姓名:
+  <input
+    [(ngModel)]="name"
+    #inputElement
+    (ngModelChange)="inputChange($event)"
+  />
+  <hello [name]="name" [type]="type" (nameChange)="nameChange($event)"></hello>
+  <byebye name="{{ name }}"></byebye>
+  <button (click)="click()">测试</button>
+</ng-container>
